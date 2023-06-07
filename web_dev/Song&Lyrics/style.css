@@ -1,0 +1,119 @@
+body {
+    background-image: url("minimal-headphones.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+  }
+
+  .header {
+    width: 88%;
+    margin-left: 3%;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 50px;
+  }
+
+  .header ul li {
+    list-style: none;
+    display: inline-block;
+    
+  }
+  
+  .header ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+
+  .element {
+    width: 100%;
+    position: absolute;
+    top: 25%;
+  }
+
+  .left {
+  background-color: black;
+  height: 100vh;
+  width: 50%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  opacity: 50%;
+  z-index: -1;
+  font-size: 30px;
+  }
+  .left_inf p {
+    margin-top: 65%;
+    margin-left: 8%;
+    line-height: 3;
+    z-index: 3;
+  }
+
+  #marq {
+    position: fixed;
+  }
+
+  .exo_lyrics {
+    margin: 4%;
+    margin-top: -100px;
+    float: left;
+    z-index: 1;
+  }
+
+  #exo_l p {
+    font-size: 16px;
+    line-height: 1.3;
+    opacity: 0.5;
+  }
+  
+  #exo_l .highlight {
+    opacity: 1;
+    font-weight: bold;
+  }
+
+  .right {
+    float: right;
+    margin-right: 6%;
+    margin-top: 18%;
+    display: flex;
+    align-items: center;
+  }
+
+  .right p {
+    font-size: 18px;
+    color: ghostwhite;
+    font-weight: 400;
+    margin: 15px;
+    
+  }
+
+  #icon1 {
+    width: 80px;
+    cursor: pointer;
+  }
+
+  #Horololo_mp4 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  .Horololo {
+    position: relative;
+    
+  }
+
+  div {
+    color: whitesmoke;
+  }
