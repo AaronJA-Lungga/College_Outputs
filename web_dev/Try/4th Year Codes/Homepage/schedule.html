@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit and Save Schedule</title>
+<style>
+    /* Some basic styling for the schedule items */
+    .schedule-item {
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+    <div id="scheduleContent" contenteditable="true">
+        <!-- Your editable schedule content goes here -->
+
+        <h2>Week</h2>
+        <p>Time</p>
+        <p>Subject</p>
+
+        <!-- More schedule items -->
+    </div>
+    <button id="saveButton">Save</button>
+
+    <script>
+        const saveButton = document.getElementById('saveButton');
+        const scheduleContent = document.getElementById('scheduleContent');
+
+        saveButton.addEventListener('click', function() {
+            const editedSchedule = scheduleContent.innerHTML;
+            localStorage.setItem('schedule10', editedSchedule);
+            alert('Schedule saved successfully!');
+        });
+
+        // Load saved schedule content from localStorage on page load
+        window.addEventListener('load', function() {
+            const savedSchedule = localStorage.getItem('schedule10');
+            if (savedSchedule) {
+                scheduleContent.innerHTML = savedSchedule;
+            }
+        });
+    </script>
+</body>
+</html>

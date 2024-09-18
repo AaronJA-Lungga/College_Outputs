@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real-Time Class Schedule</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .current {
+        background-color: #eaf6ff; /* Highlight current class */
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Real-Time Class Schedule</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Class</th>
+                <th>Teacher</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="current">
+                <td>08:00 AM - 09:00 AM</td>
+                <td>Mathematics</td>
+                <td>Mr. Smith</td>
+            </tr>
+            <tr>
+                <td>09:00 AM - 10:00 AM</td>
+                <td>Science</td>
+                <td>Ms. Johnson</td>
+            </tr>
+            <tr>
+                <td>10:00 AM - 11:00 AM</td>
+                <td>English</td>
+                <td>Mr. Thompson</td>
+            </tr>
+            <tr>
+                <td>11:00 AM - 12:00 PM</td>
+                <td>History</td>
+                <td>Ms. Davis</td>
+            </tr>
+            <!-- Add more rows for additional classes -->
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

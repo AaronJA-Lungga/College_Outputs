@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(166,167,165);
+    background: linear-gradient(90deg, rgba(166,167,165,1) 0%, rgba(255,255,255,1) 50%, rgba(166,167,165,1) 100%);}
+.Card {
+    border: 3px solid black;
+    width: 1000px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: white ;
+}
+
+.UpHolder {
+    width: auto;
+    height: 210px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    place-items: center;
+}
+
+.Parent {
+    position: relative;
+    width: 1000px;
+    height: 210px;
+
+    grid-area: 1 / 1;
+}
+
+.img1 {
+    position: absolute;
+    height: 100px;
+    border-radius: 100px;
+    margin-right: 800px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    grid-area: 1 / 1;
+
+}
+
+.img1:hover {
+    cursor: pointer;
+    animation: bouncing 2s ease-in-out infinite;
+
+}
+
+@keyframes bouncing {
+    0% {
+        transform: translate(10px, 20px);
+    }
+
+    50% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(10px, 20px);
+    }
+}
+
+h1 {
+    margin: 0;
+    font-size: 35px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    z-index: 10;
+
+    grid-area: 1 / 1;
+}
+h1:hover{
+    cursor: pointer;
+}
+
+.MidHolder{
+    width: auto;
+    height: 370px;
+}
+
+.babaw{
+    position: absolute;
+    margin-left: 255px;
+    height: 70px;
+    top: 200px;
+}
+
+.PP{
+    height: 300px;
+    display: flex;
+    width: 100%;
+}
+
+.nawng{
+    margin-top: 10px;
+    width: 270px;
+    height: 260px;
+}
+.nawng img{
+    width: 260px;
+    height: 250px;
+    border: 5px solid black;
+    border-radius: 100%;
+
+
+}
+.nawng img:hover{
+    cursor: pointer;
+    animation: bouncing 2s ease-in-out infinite;
+
+}
+
+h2{
+    position: absolute;
+    width: 400px;
+    top: 10px; 
+    font-family: "Poppins", sans-serif; 
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    margin-left: 100px;
+}
+
+#NAME{
+    position: absolute;
+    width: 400px;
+    margin-top: 110px;
+    margin-left: 50px; 
+    font-family: "Poppins", sans-serif; 
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+
+#COURSE{
+    position: absolute;
+    width: 400px;
+    margin-top: 140px;
+    margin-left: 50px;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    
+}
+
+#DOB{
+    position: absolute;
+    width: 400px;
+    margin-top: 170px;
+    margin-left: 50px;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.Info{
+    width: 229px;
+}
+
+.dotters{
+    width: 20px;
+}
+
+#dot1{
+    position: absolute;
+    width: 400px;
+    margin-top: 110px;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+
+#dot2{
+    position: absolute;
+    width: 400px;
+    margin-top: 140px;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+
+#dot3{
+    position: absolute;
+    width: 400px;
+    margin-top: 170px;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.Ans{
+    width: 450px;
+}
+
+#Cntnt1{
+    position: absolute;
+    width: 400px;
+    margin-top: 110px;
+    margin-left: 20px;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+
+#Cntnt2{
+    position: absolute;
+    width: 400px;
+    margin-top: 140px;
+    margin-left: 20px;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+
+#Cntnt3{
+    position: absolute;
+    width: 400px;
+    margin-top: 170px;
+    margin-left: 20px;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.TiilBox{
+    position: relative; 
+}
+
+.Tiil{
+    display: flex;
+}
+
+#NUMBERZ{
+    position: absolute;
+    font-family: "Poppins", sans-serif;
+    margin-top: 20px;
+    margin-left: 90px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+}

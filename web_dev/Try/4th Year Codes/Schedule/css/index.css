@@ -1,0 +1,500 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  outline 1px solid red;
+}
+
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans'; 
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+}
+
+body {
+  color: black;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  /*padding and margin gone*/
+}
+
+.line {
+  border-bottom: 3px solid rgb(255, 255, 255); /* Style of the line */
+  display: inline-block; /* Make it inline */
+  width: 30px; /* Adjust the width of the line */
+  margin: 0 10px; /* Adjust margin to control spacing */
+  border-radius: 1rem;
+}
+
+.sidebar:hover .line {
+  width: 200px; /* Adjusted width of the line on hover */
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+main {
+  margin-left: 5rem; 
+  /* 
+  ---- rem unit = relative of the font size in the root element  
+  ---- 5rem * 16px = 80px
+  ---- relative units is useful because if you change font size 
+  everything will stay proprortional to that font size (root)
+  so that you dont have to manually update pixel values
+  */
+  padding: 1rem;
+}
+
+.all-cont{
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.left-cont {
+  width: 5rem;
+}
+
+.sidebar {
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  background-color: var(--bg-primary);
+  transition: 200ms ease;
+  white-space: nowrap;
+  overflow: hidden; /* Hide overflow to prevent line from being visible initially */
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-items {
+  width: 100%;
+}
+
+.nav-items-Logo {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.nav-items:last-child {
+  margin-top: auto;     /*search other child*/
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+
+}
+
+.nav-nolink {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.Logo-Holder img{
+  width:48px;
+  background-color: white;
+  outline: 2px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  margin-left: 14px;
+  margin-top: 10px;
+}
+
+.navlink-text-Logo {
+  display: none;
+
+  overflow: hidden; /*for text not to go out of sidebar*/
+  margin-left:10px;
+  color: white;
+  font-weight: bolder;
+  font-size: 17px;
+}
+
+.navlink-text {
+  display: none;
+  
+  overflow: hidden; /*for text not to go out of sidebar*/
+  margin-left: -20px;
+  color:white
+}
+
+.nav-link i {
+  min-width: 1.7rem;   /*Icon*/
+  margin: 0 1.9rem;
+  font-size: 18px;
+}
+
+.nav-nolink i {
+  min-width: 1.7rem; /*Icon*/
+  margin: 0 1.9rem;
+  font-size: 18px;
+}
+
+.sidebar:hover {
+  width: 16rem;
+}
+
+.navlink-text:hover {
+  width: 16rem;
+}
+
+.sidebar:hover .navlink-text {
+  display: block;
+}
+.sidebar:hover .navlink-text-Logo {
+  display: block;
+}
+
+.nav-link:hover{
+  color: #ff7eee;
+}
+
+/*                           MID                                   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.center-section{
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+}
+
+/*Class Schedule*/
+
+.sched{
+  
+  padding: 1rem;
+}
+
+.sched > h1 {
+  text-align: center;
+}
+
+.schedule {
+  color: white;
+  display: flex;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-position-y: 260px ;
+}
+
+.schedule ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+  list-style: none;
+  background-color: #31363F;
+  padding: 30px 0px;
+  border-radius: 10px;
+}
+
+.schedule > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+}
+
+.top-class {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+}
+
+.fa-pen-to-square {
+  color: #31363F;
+  font-size: 1.2rem;      
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(60%);
+  cursor: pointer;
+}
+/*
+.today {
+  background-image: url(/img/monday.png);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.tomorrow {
+  background-image: url(/img/tuesday.png);
+  border-radius: 0px 0px 10px 10px;
+}
+*/
+
+.popup {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #c2c2c2;
+  padding: 10px 0px;
+  box-shadow: 0 2px 5px #31363F;
+  border-radius: 10px;
+  width: 950px;
+  z-index: 1;
+}
+
+.popup2 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 2;
+}
+
+.popup-content {
+  height: 80vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.subject-list {
+  color: white;
+  background-color: #6e7788;
+  margin: 0px 20px;
+  height: 90px;
+  border-radius: 10px;
+  display: flex;
+  position: relative;
+}
+
+.subject-left {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+.subjects {
+  display: flex;
+  align-items: center;
+  color: rgb(59, 57, 57);
+}
+
+.selected {
+  background-color: #ffcccc;
+  border-radius: 10%;
+}
+
+.subject-left.delete-mode .subjects:hover {
+  cursor: pointer;
+}
+
+.subject-right {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-evenly;
+  width: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-left: black 1px solid;
+}
+
+.buttons {
+  background-color: transparent;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+
+/* To Do List */
+
+.todo-list {
+  display: flex;
+  justify-content:center;
+}
+
+.todo-app {
+  padding: 0px 30px 50px; 
+  margin: 0.5rem;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  height: 24.7rem;
+  overflow: hidden;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.todo-header{
+  display: flex;
+  margin-bottom: 1rem;
+}
+.todo-header img{
+  margin-top: 2%;
+  margin-right: 1%;
+  height: 5rem;
+  width: 5rem;
+}
+.todo-app h1 {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: rgb(59, 57, 57);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}   
+
+form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px; 
+}
+
+input[type="text"] {
+  width: 100%;
+  height: 2rem;
+  padding: 20px;
+  border: 1px solid #31363F;
+  border-left: 0;
+  border-right: 0;
+  font-size: 1rem;
+  margin-left: rem;
+  background-color: #f0f0f0;
+}
+
+input::placeholder{
+  color: #31363F;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 1000;
+}
+.btn {
+  background-color: rgb(139, 109, 43);
+  border: none;
+  height: 2.6rem;
+  width: 2.5rem;
+  color: white;
+  padding: 10px 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #e5e5d4dc;
+  border: 1px solid #31363F;
+  color: black;
+}
+
+.tasklist {
+  color: white;
+  background-color: rgba(235, 187, 82, 0.679);
+  border-radius: 5px;
+  overflow-y: scroll;
+  max-height: 280px;
+  width: auto;
+}
+
+.tasklist ul li {
+  list-style-type: none;
+  font-size: 1.1rem;
+  padding: 10px 6px 10px 30px;
+  cursor: pointer;
+  position: relative; 
+}
+
+.tasklist ul li::before {
+  content: "☐";
+  font-size: 25px;
+  position: absolute;
+  left: -1px;
+  top: 4px;
+}
+
+
+
+
+
+
+
+#task-list {
+  padding: 0px 30px;  
+}
+
+ul li.checked {
+  text-decoration: line-through;
+  color: #384926;
+}
+
+.tasklist li.checked::before {
+  content: "☑";
+  color: #384926;
+}
+
+
+
+.tasklist-hidden {
+  display: none;
+}
+
+.right-section {
+  width: 20rem;
+
+}
+
+.week-days {
+  padding: 0.1rem;
+  
+}
+

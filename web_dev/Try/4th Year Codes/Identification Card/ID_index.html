@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <title>Document</title>
+        <link rel="stylesheet" href="ID_style.css">
+    </head>
+    <body>
+
+        <div class="Card">
+
+            <div class="UpHolder">
+                <img src="Upper.png" class="Parent">
+                <img src="bx-home.svg" class="img1">
+                <h1>CEBU TECHNOLOGICAL UNIVERSITY</h1>
+            </div>
+
+            <div class="MidHolder">
+                <div class="babaw">
+                    <img src="midsec.png" alt>
+                    <h2>STUDENT ID CARD</h2>
+                </div>
+
+                <div class="PP">
+                    <div class="nawng">
+                        <img src="user.jpg" id="profile"
+                            onclick="ProfileChange()">
+
+                        <script>
+                            function ProfileChange(){
+
+                                let displayImage = document.getElementById('profile')
+                                if(displayImage.src.match('user.jpg')){
+                                    displayImage.src = 'picture.svg'
+                                }
+                                else{
+                                    displayImage.src = 'user.jpg'
+
+                                }
+                            }
+                        </script>
+
+                    </div>
+
+                    <div class="Info">
+                        <h3 id="NAME"> NAME</h3>
+                        <h3 id="COURSE"> COURSE</h3>
+                        <h3 id="DOB"> DATE OF BIRTH</h3>
+                    </div>
+
+                    <div class="dotters">
+                        <h3 id="dot1">:</h3>
+                        <h3 id="dot2">:</h3>
+                        <h3 id="dot3">:</h3>
+                    </div>
+
+                    <div class="Ans">
+                        <h3 id="Cntnt1"> Jhun Paul C. Fugoso</h3>
+                        <h3 id="Cntnt2"> BSCpE 3 Day</h3>
+                        <h3 id="Cntnt3"> April Fools</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Tiil">
+                <img src="Footer.png" class="TiilBox">
+                <h4 id="NUMBERZ">ID NO: 3211100</h4>
+            </div>
+        </div>
+    </body>
+</html>

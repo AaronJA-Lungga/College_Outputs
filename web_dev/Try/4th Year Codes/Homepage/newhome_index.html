@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="newhome_style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  <!--mga icons sa word-->
+  <title>Home - Class Management System</title>
+</head>
+
+<body>
+  <div class="all-cont">
+
+  
+  <div class="left-cont">
+    <nav class="sidebar">
+
+
+      <ul class="menu-items">
+        
+        <li class="nav-items-Logo">
+          <div class="nav-nolink"> <!--submenu_item dont know............ div ito ginawa lang a-->
+            <span class="Logo-Holder">
+              <img src="logo-new.png">
+            </span>
+            <span class="navlink-text-Logo">Class Management</span>
+          </div>
+        </li>
+          
+          <p>
+            <span class="line"></span>
+          </p>
+
+        <li class="nav-items">
+          <div class="nav-nolink"> <!--submenu_item dont know............ div ito ginawa lang a-->
+            <span class="navlink-noicon">
+              <i class="bx bx-user"></i>
+            </span>
+            <span class="navlink-text">Student's Name</span>
+          </div>
+        </li>
+
+        <p>
+          <span class="line"></span>
+        </p>
+
+
+
+        <li class="nav-items">
+          <a href="/Homepage/newhome_index.html" class="nav-link"> <!--submenu_item dont know............ div ito ginawa lang a-->
+            <span class="navlink-icon">
+              <i class="bx bx-home-smile"></i>
+            </span>
+            <span class="navlink-text">Home</span>
+          </a>
+        </li>
+
+        <li class="nav-items">
+          <a href="/Activity Cards/card_index.html" class="nav-link"> <!--submenu_item dont know-->
+            <span class="navlink-icon">
+              <i class="bx bx-pencil"></i>
+            </span>
+            <span class="navlink-text">Information Center</span>
+          </a>
+        </li>
+
+        <li class="nav-items">
+          <a href="/Schedule/index.html" class="nav-link"> <!--submenu_item dont know-->
+            <span class="navlink-icon">
+              <i class="bx bx-pencil"></i>
+            </span>
+            <span class="navlink-text">Schedule</span>
+          </a>
+        </li>
+
+        <p>
+          <span class="line"></span>
+        </p>
+
+        <li class="nav-items">
+          <a href="/Identification Card/ID_index.html" class="nav-link"> <!--submenu_item dont know-->
+            <span class="navlink-icon">
+              <i class="bx bx-user"></i>
+            </span>
+            <span class="navlink-text">
+              <pre>User Information</pre>
+            </span>
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+  </div>
+
+  <div class="mid-cont">
+    <div class="toolbar">
+      <ul class="tool-list">
+          <li class="tool">
+              <button type="button" data-command='justifyLeft' class="tool--btn">
+                  <i class=' fas fa-align-left'></i>
+              </button>
+          </li>
+          <li class="tool">
+              <button type="button" data-command='justifyCenter' class="tool--btn">
+                  <i class=' fas fa-align-center'></i>
+              </button>
+          </li>
+          <li class="tool">
+              <button type="button" data-command="bold" class="tool--btn">
+                  <i class=' fas fa-bold'></i>
+              </button>
+          </li>
+          <li class="tool">
+              <button type="button" data-command="italic" class="tool--btn">
+                  <i class=' fas fa-italic'></i>
+              </button>
+          </li>
+          <li class="tool">
+              <button type="button" data-command="underline" class="tool--btn">
+                  <i class=' fas fa-underline'></i>
+              </button>
+          </li>
+          <li class="tool">
+              <button type="button" data-command="insertOrderedList" class="tool--btn">
+                  <i class=' fas fa-list-ol'></i>
+              </button>
+          </li>
+          <li class="tool">
+              <button type="button" data-command="insertUnorderedList" class="tool--btn">
+                  <i class=' fas fa-list-ul'></i>
+              </button>
+          </li>
+          <li class="tool">
+              <button type="button" data-command="createlink" class="tool--btn">
+                  <i class=' fas fa-link'></i>
+              </button>
+          </li>
+      </ul>
+  </div>
+
+  <div id="output" contenteditable="true"></div>
+<button id="saveTextButton">Save Text</button>
+
+
+
+  
+  </div>
+
+  <div class="right-cont">
+      <div class="rightbar">
+          <div class="schedule">
+              <!--Put schedule here automatically-->
+
+          </div>
+
+          <div class="to-do">
+              <!--Put schedule here automatically-->
+          </div>
+
+          <div class="events">
+              <!--Put schedule here automatically-->
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+</div>
+
+
+<script>
+  let output = document.getElementById('output');
+  let buttons = document.getElementsByClassName('tool--btn');
+  let saveTextButton = document.getElementById('saveTextButton');
+
+  for (let btn of buttons) {
+      btn.addEventListener('click', () => {
+          let cmd = btn.dataset['command'];
+          if (cmd === 'createlink') {
+              let url = prompt("Enter the link here: ", "http://");
+              document.execCommand(cmd, false, url);
+          } else {
+              document.execCommand(cmd, false, null);
+          }
+      });
+  }
+
+  saveTextButton.addEventListener('click', () => {
+      let textContent = output.innerHTML; // Use innerHTML to preserve formatting
+      localStorage.setItem('savedText', textContent);
+      alert('Text saved successfully!');
+  });
+
+  // Fetch the content of schedule.html
+  fetch('schedule.html')
+  .then(response => response.text())
+  .then(html => {
+      const scheduleContainer = document.querySelector('.schedule');
+      scheduleContainer.innerHTML = html;
+
+      const savedSchedule = localStorage.getItem('schedule10');
+      if (savedSchedule) {
+          const scheduleContent = scheduleContainer.querySelector('#scheduleContent');
+          scheduleContent.innerHTML = savedSchedule;
+      }
+
+      const saveButton = scheduleContainer.querySelector('#saveButton');
+      if (saveButton) {
+          saveButton.remove();
+      }
+      
+      const editableContent = scheduleContainer.querySelector('#scheduleContent');
+      editableContent.contentEditable = false;
+  });
+</script>
+
+</body>
+
+</html>
